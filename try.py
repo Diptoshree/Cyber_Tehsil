@@ -458,7 +458,8 @@ class UnsafeOpenAI(OpenAI):
 
 # ----------- ENV & CLIENT SETUP -----------
 load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+#api_key = os.getenv("OPENAI_API_KEY")
+api_key=st.secrets["secret_section"]["openai_api_key"]
 client = UnsafeOpenAI(api_key=api_key)
 
 # ----------- LOGGER SETUP -----------
