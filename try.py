@@ -476,29 +476,7 @@ elif option == "Bulk Objection Processing":
                     )
         except Exception as e:
             st.error(f"Error reading file: {e}")
-# ----------- SIDEBAR HIGHLIGHTS -----------
-# with st.sidebar:
-#     st.markdown("""
-#     <style>
-#     .stSidebar > div:first-child {
-#         background-color: rgba(255, 255, 255, 0); /* Transparent sidebar to blend with background */
-#     }
-#     .bullet-points {
-#         font-size: 16px;
-#         line-height: 1.6;
-#     }
-#     </style>
-    
-#     <div class="bullet-points">
-#         <ul>
-#             <li><strong>Highlights</strong></li>
-#             <li>During any land property transaction, Cyber Tehsil asks villagers to submit objections, if any.</li>
-#             <li>Cyber Tehsildar evaluates the objections and objected cases mandatorily go to territorial court.</li>
-#             <li>This AI utility will classify objections into ‘Valid Objection’ and ‘No Objection’.</li>
-#             <li>The classification shall save court’s time in processing invalid objections.</li>
-#         </ul>
-#     </div>
-#     """, unsafe_allow_html=True)
+
 # ----------- SIDEBAR HIGHLIGHTS -----------
 with st.sidebar:
     st.markdown("""
