@@ -395,7 +395,9 @@ Return the result in the following JSON format:
 
 def classify_objection(objection):
     objection_new = normalize_text(objection)
-    no_objection_phrases = ['no objection', 'आपत्ति नहीं', 'dont have objection', 'dont have any objection', 'apatti nehi', 'आपत्ति नहि','समस्या नहि','dont have any problem','samasya nehi']
+    no_objection_phrases = ['no objection', 'आपत्ति नहीं', 'dont have objection', 'dont have any objection', 'apatti nehi', 'आपत्ति नहि',
+                            'समस्या नहि','dont have any problem','samasya nehi','koi problem nehi','koi objection nehi',
+                            'samasya nahi','koi problem nahi','koi objection nahi','samasya nhi','koi problem nhi','koi objection nhi',]
     trigger_words = [ 'आपत्ति', "आपत्ति ", 'आपत्‍ती', "apatati", "aapatti", "aapaati", "appati", "apatti", "apti","problem","समस्या",
         "रोक", "बंजर", "लौलाश", "पैतृक", "अन्‍य", "पैतरक", "भुमि","भूमि", "जमीन", "विवाद", "फर्जी", "नामांतरण","अपराध","आराजी",
         "सहमति नहीं", "बाबद्", "अवरोध", "विवादित", "आवश्यक", "सरकारी", "शासकीय", "धोखेबाजी", "कब्‍जा","शासन",
@@ -516,6 +518,7 @@ with st.sidebar:
     </div>
 
     """, unsafe_allow_html=True)
+
 
 
 
