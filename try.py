@@ -348,7 +348,7 @@ No Objection: If the statement does not indicate any objection in the above 6 ca
 Classification Process (Sequential Steps):
 Step 1: Keyword Detection (Primary Step)
 Check if the statement contains any of the following keywords (including possible spelling mistakes or incomplete words):
-['आपत्ति', "आपत्ति", "आपत्ति ", 'आपत्‍ती', "apatati", "aapatti", "aapaati", "appati", "apatti", "apti",
+['आपत्ति', "आपत्ति", "आपत्ति ", 'आपत्‍ती', "apatati", "aapatti", "aapaati", "appati", "apatti", "apti","problem","समस्या",
 "रोक", "बंजर", "लौलाश", "पैतृक", "अन्‍य", "पैतरक", "भुमि", "जमीन", "विवाद", "फर्जी", "नामांतरण",
 "बाबद्", "विवाद", "अवरोध", "विवादित", "आवश्यक", "सरकारी", "शासकीय", "धोखेबाजी", "कब्‍जा", "जमीन",
 "naksha", "सिविल", "पूर्वजों", "mere", "mera", "case", "civil", "court", "bhumi", "land", "meri", "bandhak",
@@ -395,8 +395,8 @@ Return the result in the following JSON format:
 
 def classify_objection(objection):
     objection_new = normalize_text(objection)
-    no_objection_phrases = ['no objection', 'आपत्ति नहीं', 'dont have objection', 'dont have any objection', 'apatti nehi', 'आपत्ति नहि']
-    trigger_words = [ 'आपत्ति', "आपत्ति ", 'आपत्‍ती', "apatati", "aapatti", "aapaati", "appati", "apatti", "apti",
+    no_objection_phrases = ['no objection', 'आपत्ति नहीं', 'dont have objection', 'dont have any objection', 'apatti nehi', 'आपत्ति नहि','समस्या नहि','dont have any problem','samasya nehi']
+    trigger_words = [ 'आपत्ति', "आपत्ति ", 'आपत्‍ती', "apatati", "aapatti", "aapaati", "appati", "apatti", "apti","problem","समस्या",
         "रोक", "बंजर", "लौलाश", "पैतृक", "अन्‍य", "पैतरक", "भुमि","भूमि", "जमीन", "विवाद", "फर्जी", "नामांतरण","अपराध","आराजी",
         "सहमति नहीं", "बाबद्", "अवरोध", "विवादित", "आवश्यक", "सरकारी", "शासकीय", "धोखेबाजी", "कब्‍जा","शासन",
         "आराजियों","अपील", "naksha", "सिविल", "पूर्वजों", "mere", "mera", "case", "civil", "court", "bhumi", 
@@ -516,6 +516,7 @@ with st.sidebar:
     </div>
 
     """, unsafe_allow_html=True)
+
 
 
 
